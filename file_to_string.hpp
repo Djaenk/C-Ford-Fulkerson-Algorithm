@@ -2,6 +2,7 @@
 #define FILE_TOSTRING
 
 #include <fstream>
+#include <vector>
 
 std::string readFileToString(std::string filename){
 	std::ifstream file(filename.c_str(), std::ios::in | std::ios::binary | std::ios::ate);

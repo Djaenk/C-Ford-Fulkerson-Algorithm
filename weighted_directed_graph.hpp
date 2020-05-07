@@ -6,8 +6,8 @@
 template <typename vertex>
 class WeightedDirectedGraph : public Graph<vertex>{
 	private:
-		double bruteForce(const vertex&, const vertex&);
 		double EdmondsKarp(const vertex&, const vertex&);
+		double bruteForce(const vertex&, const vertex&);
 	protected:
 		//inherit pair hashing function from base graph class
 		struct hash_pair : public Graph<vertex>::hash_pair{};
@@ -28,6 +28,10 @@ class WeightedDirectedGraph : public Graph<vertex>{
 		std::string toAdjacencyMatrix(std::string delimiter = ",");
 		void readAdjacencyMatrix(std::string, const char delimiter = ',');
 };
+
+#include "maximum_flow_algorithms.tpp"
+
+
 
 template <typename vertex>
 void

@@ -2,6 +2,7 @@
 #define SIMPLE_GRAPH
 
 #include <unordered_map>
+#include <map>
 #include <unordered_set>
 #include <utility>
 #include <tuple>
@@ -28,7 +29,7 @@ class Graph{
 		struct hash_pair {                //provide function to hash std::pair so
 			template <class T1, class T2> //it can be used as a key in stl hashmaps
 			size_t operator()(const std::pair<T1, T2>& p) const{ 
-				return std::hash<T1>{}(p.first) ^ std::hash<T2>{}(p.second);
+				return 11111111111 * std::hash<T1>{}(p.first) + std::hash<T2>{}(p.second);
 			} 
 		};
 
