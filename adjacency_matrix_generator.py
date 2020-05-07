@@ -1,6 +1,6 @@
 import random
 
-for i in range(5, 8):
+for i in range(5, 10):
 	#each iteration produces a graph increasing linearly in number of vertices
 	vertex_count = i
 
