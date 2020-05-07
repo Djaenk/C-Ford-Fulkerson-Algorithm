@@ -9,7 +9,7 @@ env:
   ###   Output Files will follow input files
   ###   Note: These should be the actual names of the files.  No double quotes
   INPUT_FILES:
-  OUTPUT_FILES: graph1.txt graph2.txt graph3.txt
+  OUTPUT_FILES:
 
 jobs:
   build:
@@ -56,7 +56,7 @@ jobs:
       - name: Run the project
         working-directory: ${{runner.workspace}}/build
         shell: bash
-        run: ./$EXE_NAME $INPUT_FILES $OUTPUT_FILES
+        run: ./$EXE_NAME
 
       - name: Copy output files to artifact directory
         working-directory: ${{runner.workspace}}/build
